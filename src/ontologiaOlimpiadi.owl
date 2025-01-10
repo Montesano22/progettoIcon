@@ -1,0 +1,727 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.progettoICON.com/ontologiaOlimpiadi#"
+     xml:base="http://www.progettoICON.com/ontologiaOlimpiadi"
+     xmlns:ont="http://www.co-ode.org/ontologies/ont.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:webprotege="http://webprotege.stanford.edu/">
+    <owl:Ontology rdf:about="http://www.progettoICON.com/ontologiaOlimpiadi">
+        <owl:versionIRI rdf:resource="urn:absolute:ICON"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBIv3TwVxZZgZMBOmoxRVbu -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RBIv3TwVxZZgZMBOmoxRVbu">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#City"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Games"/>
+        <rdfs:label>hostedGames</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBytjt4lotJ6jjQd9BGmqMo -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RBytjt4lotJ6jjQd9BGmqMo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>partOfSport</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCDWBY6rfk2Sreb1MNf2EOh -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RCDWBY6rfk2Sreb1MNf2EOh">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Athlete"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Team"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Games"/>
+        <rdfs:label>competeInGames</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#awardedMedal -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#awardedMedal">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Athlete"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#awardedMedal"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Athlete"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Medal"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#awardedMedal"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Team"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#belongToTeam -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#belongToTeam">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Athlete"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#belongToTeam"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Athlete"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Team"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#belongToTeam"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Team"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#competesInEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#competesInEvent">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Athlete"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#competesInEvent"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Athlete"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Event"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#competesInEvent"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Event"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hostedByCity -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hostedByCity">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Games"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hostedByCity"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Event"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#City"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hostedByCity"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#City"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#participatesInSport -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#participatesInSport">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Athlete"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#participatesInSport"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Athlete"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sport"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#participatesInSport"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sport"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9DhFVjK3vfmB8L8NAYSBJ7 -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/R9DhFVjK3vfmB8L8NAYSBJ7">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label>isInCountry</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasAge">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Athlete"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasCityName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasCityName">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#City"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasHeight">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Athlete"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasName">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Athlete"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Event"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sport"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Team"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasSeason -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasSeason">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Games"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasWeight">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Athlete"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasYear">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Event"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Athlete -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Athlete"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#City -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#City"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Event -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Event"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Games -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Games"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Medal -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Medal"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Sport -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sport"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Team -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Team"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/R3B7tKUCYllcoqWz4KKN4F -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R3B7tKUCYllcoqWz4KKN4F">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Games"/>
+        <ont:hostedByCity rdf:resource="http://webprotege.stanford.edu/RBwtu1pUaqTyuB8PBir2NXX"/>
+        <ont:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string 1988 Winter Olympics</ont:hasName>
+        <ont:hasSeason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string Winter</ont:hasSeason>
+        <ont:hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:integer 1988</ont:hasYear>
+        <rdfs:label>1988 Winter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R70eZL49nJ92fUpxdMggl7O -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R70eZL49nJ92fUpxdMggl7O">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Team"/>
+        <ont:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string Italy</ont:hasName>
+        <rdfs:label>Italy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7lgljvmg8Jx43V5EIRwLE4 -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R7lgljvmg8Jx43V5EIRwLE4">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Event"/>
+        <webprotege:RBytjt4lotJ6jjQd9BGmqMo rdf:resource="http://webprotege.stanford.edu/R8T0Jg7GtH6PIcHnkjLkwFN"/>
+        <ont:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string Judo Men&apos;s Extra_Lightweight</ont:hasName>
+        <rdfs:label>Judo Men&apos;s Extra-Lightweight</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8T0Jg7GtH6PIcHnkjLkwFN -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R8T0Jg7GtH6PIcHnkjLkwFN">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sport"/>
+        <rdfs:label>Judo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8fJ8JYLHbPnzaCugDb6oOA -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R8fJ8JYLHbPnzaCugDb6oOA">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Medal"/>
+        <rdfs:label>SilverMedal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8uE8TFsx4hix6lBrh3PGHr -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R8uE8TFsx4hix6lBrh3PGHr">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Athlete"/>
+        <webprotege:RCDWBY6rfk2Sreb1MNf2EOh rdf:resource="http://webprotege.stanford.edu/ROq1AYDEg6K5aIlwBGplRp"/>
+        <ont:awardedMedal rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GoldMedal"/>
+        <ont:belongToTeam rdf:resource="http://webprotege.stanford.edu/R70eZL49nJ92fUpxdMggl7O"/>
+        <ont:competesInEvent rdf:resource="http://webprotege.stanford.edu/RsMDkEv8fuoVk2PM8lo5uZ"/>
+        <ont:participatesInSport rdf:resource="http://webprotege.stanford.edu/RCKIEcjw29NEyD84jIt3pJz"/>
+        <ont:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:integer 30</ont:hasAge>
+        <ont:hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:float 180.0</ont:hasHeight>
+        <ont:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string Flavio Anastasia</ont:hasName>
+        <ont:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:float 75.0</ont:hasWeight>
+        <rdfs:label>Flavio Anastasia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9BSjJX7pGdVrZt6xpLhSJT -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R9BSjJX7pGdVrZt6xpLhSJT">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sport"/>
+        <rdfs:label>Athletics</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9CnitGyraP1m7rv7F4U14G -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R9CnitGyraP1m7rv7F4U14G">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sport"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:label>Handball</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9IBZ86brM9EKFJozgUJRjf -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R9IBZ86brM9EKFJozgUJRjf">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sport"/>
+        <rdfs:label>Swimming</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9OCqxLCGQXa1jcMVYpWMQt -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R9OCqxLCGQXa1jcMVYpWMQt">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Games"/>
+        <ont:hostedByCity rdf:resource="http://webprotege.stanford.edu/RBjeyQxDbvqxSCx2ej1qrwL"/>
+        <ont:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string 2012 Summer Olympics</ont:hasName>
+        <ont:hasSeason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string Summer</ont:hasSeason>
+        <ont:hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:integer 2012</ont:hasYear>
+        <rdfs:label>2012 Summer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9SHg8bjjr914Ki98SeIg2A -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R9SHg8bjjr914Ki98SeIg2A">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sport"/>
+        <rdfs:label>Football</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RB2Nx8CCT6GA1Jcqa60VJLb -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RB2Nx8CCT6GA1Jcqa60VJLb">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sport"/>
+        <rdfs:label>Tennis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBPKJ6ro2rmY0Iw0I4lN8Tk -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RBPKJ6ro2rmY0Iw0I4lN8Tk">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sport"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:label>Basketball</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBikCRWh9XyNf24cQASqyj2 -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RBikCRWh9XyNf24cQASqyj2">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Medal"/>
+        <rdfs:label>BronzeMedal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBjeyQxDbvqxSCx2ej1qrwL -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RBjeyQxDbvqxSCx2ej1qrwL">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#City"/>
+        <webprotege:RBIv3TwVxZZgZMBOmoxRVbu rdf:resource="http://webprotege.stanford.edu/R9OCqxLCGQXa1jcMVYpWMQt"/>
+        <ont:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string London</ont:hasName>
+        <ont:hasSeason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string Summer</ont:hasSeason>
+        <ont:hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:integer 2012</ont:hasYear>
+        <rdfs:label>London</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBwtu1pUaqTyuB8PBir2NXX -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RBwtu1pUaqTyuB8PBir2NXX">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#City"/>
+        <webprotege:RBIv3TwVxZZgZMBOmoxRVbu rdf:resource="http://webprotege.stanford.edu/R3B7tKUCYllcoqWz4KKN4F"/>
+        <ont:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string Calgary</ont:hasName>
+        <ont:hasSeason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string Winter</ont:hasSeason>
+        <ont:hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:integer 1988</ont:hasYear>
+        <rdfs:label>Calgary</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCGbVWOI47Ps6cFXHQg2RKj -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RCGbVWOI47Ps6cFXHQg2RKj">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sport"/>
+        <rdfs:label>SpeedSkating</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCKIEcjw29NEyD84jIt3pJz -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RCKIEcjw29NEyD84jIt3pJz">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sport"/>
+        <rdfs:label>Cycling</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCQ4z4jR4QPCMFKZqW0H0iU -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RCQ4z4jR4QPCMFKZqW0H0iU">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Event"/>
+        <ont:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string Speed_Skating_Women&apos;s 500 metres</ont:hasName>
+        <rdfs:label>Speed Skating Women&apos;s 500 metres</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCWUO5mhihs9Gb6zg3F6muJ -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RCWUO5mhihs9Gb6zg3F6muJ">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Athlete"/>
+        <webprotege:RCDWBY6rfk2Sreb1MNf2EOh rdf:resource="http://webprotege.stanford.edu/ROq1AYDEg6K5aIlwBGplRp"/>
+        <ont:belongToTeam rdf:resource="http://webprotege.stanford.edu/RQ3BbvLR5bWC5T8CdjxK6h"/>
+        <ont:competesInEvent rdf:resource="http://webprotege.stanford.edu/RD0Wxxo9J2yQsPOCUhV7JHJ"/>
+        <ont:participatesInSport rdf:resource="http://webprotege.stanford.edu/RBPKJ6ro2rmY0Iw0I4lN8Tk"/>
+        <ont:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:integer 24</ont:hasAge>
+        <ont:hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:float 180.0</ont:hasHeight>
+        <ont:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string A Dijiang</ont:hasName>
+        <ont:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:float 80.0</ont:hasWeight>
+        <rdfs:label>A Dijiang</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCvhxzl4H7cW6LxokKZnLj2 -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RCvhxzl4H7cW6LxokKZnLj2">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Athlete"/>
+        <ont:awardedMedal rdf:resource="http://webprotege.stanford.edu/R8fJ8JYLHbPnzaCugDb6oOA"/>
+        <ont:belongToTeam rdf:resource="http://webprotege.stanford.edu/RjjXwSgIy5wO8VBA5MqBWs"/>
+        <ont:competesInEvent rdf:resource="http://webprotege.stanford.edu/Rir940PgrJy2hyYALS5nkH"/>
+        <ont:participatesInSport rdf:resource="http://webprotege.stanford.edu/R9CnitGyraP1m7rv7F4U14G"/>
+        <ont:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:integer 24</ont:hasAge>
+        <ont:hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:float  180.0</ont:hasHeight>
+        <ont:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string Lois Abbingh</ont:hasName>
+        <ont:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:float 80.0</ont:hasWeight>
+        <rdfs:label>Lois Abbingh</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RD0Wxxo9J2yQsPOCUhV7JHJ -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RD0Wxxo9J2yQsPOCUhV7JHJ">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Event"/>
+        <webprotege:RBytjt4lotJ6jjQd9BGmqMo rdf:resource="http://webprotege.stanford.edu/RBPKJ6ro2rmY0Iw0I4lN8Tk"/>
+        <ont:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string Men&apos;s Basketball</ont:hasName>
+        <rdfs:label>Men&apos;s Basketball</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/ROq1AYDEg6K5aIlwBGplRp -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/ROq1AYDEg6K5aIlwBGplRp">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Games"/>
+        <ont:hostedByCity rdf:resource="http://webprotege.stanford.edu/RyYv1fTirl54f4LN0vszDS"/>
+        <ont:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string 1998 Summer Olympics</ont:hasName>
+        <ont:hasSeason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string Summer</ont:hasSeason>
+        <ont:hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:integer 1992</ont:hasYear>
+        <rdfs:label>1992 Summer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RQ3BbvLR5bWC5T8CdjxK6h -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RQ3BbvLR5bWC5T8CdjxK6h">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Team"/>
+        <ont:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string China</ont:hasName>
+        <rdfs:label>China</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/Rir940PgrJy2hyYALS5nkH -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/Rir940PgrJy2hyYALS5nkH">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Event"/>
+        <webprotege:RBytjt4lotJ6jjQd9BGmqMo rdf:resource="http://webprotege.stanford.edu/R9CnitGyraP1m7rv7F4U14G"/>
+        <ont:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string Women_Handball</ont:hasName>
+        <rdfs:label>Women_Handball</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RjjXwSgIy5wO8VBA5MqBWs -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RjjXwSgIy5wO8VBA5MqBWs">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Team"/>
+        <ont:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string Netherlands</ont:hasName>
+        <rdfs:label>Netherlands</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RsMDkEv8fuoVk2PM8lo5uZ -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RsMDkEv8fuoVk2PM8lo5uZ">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Event"/>
+        <webprotege:RBytjt4lotJ6jjQd9BGmqMo rdf:resource="http://webprotege.stanford.edu/RCKIEcjw29NEyD84jIt3pJz"/>
+        <ont:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string Mens_Team_Pursuit</ont:hasName>
+        <rdfs:label>Mens_Team_Pursuit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RyYv1fTirl54f4LN0vszDS -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RyYv1fTirl54f4LN0vszDS">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#City"/>
+        <webprotege:RBIv3TwVxZZgZMBOmoxRVbu rdf:resource="http://webprotege.stanford.edu/ROq1AYDEg6K5aIlwBGplRp"/>
+        <webprotege:R9DhFVjK3vfmB8L8NAYSBJ7 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spain</webprotege:R9DhFVjK3vfmB8L8NAYSBJ7>
+        <ont:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string Barcelona</ont:hasName>
+        <ont:hasSeason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string Summer</ont:hasSeason>
+        <ont:hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:integer 1992</ont:hasYear>
+        <rdfs:label>Barcelona</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GoldMedal -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#GoldMedal">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Medal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#USA -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#USA">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Team"/>
+        <ont:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xsd:string USA</ont:hasName>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi -->
+
