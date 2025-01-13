@@ -58,7 +58,7 @@ E' necessario avviare il file in base alle tecniche di machine learning o argome
 
 ## Note Finali
 - Assicurati di aver configurato correttamente il tuo ambiente Python.
-- Abbiamo testato il codice su diversi sistemi operativi (potrebberro volerci librerie aggiuntive su macos/linux)
+- Abbiamo testato il codice su diversi sistemi operativi (potrebbero volerci librerie aggiuntive su macos/linux)
 - Se riscontri problemi durante l'avvio, verifica che tutte le librerie siano installate correttamente con:
   ```bash
   pip install -r requirements.txt
